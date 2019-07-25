@@ -1,0 +1,244 @@
+{
+	"id": "49f74064-9274-4960-88b0-58fdbe3781ee",
+	"name": "microcommerce",
+	"allTests": [],
+	"timestamp": "2019-07-25T12:52:21.167Z",
+	"collection_id": "7b4ac67c-e457-47fa-8aad-f1be0d6f2547",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "7b4ac67c-e457-47fa-8aad-f1be0d6f2547",
+		"name": "microcommerce",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"87091721-c524-45b5-a6b9-938d7160bd93",
+			"4f93aaaa-9520-40d0-ab6c-92d33771b080",
+			"3c65864f-848d-4722-b5fe-2aaeaafbb1ed",
+			"4fe456ec-bccd-41b5-bf22-97674643382e",
+			"93cfb574-2619-4c86-8b1a-87c47f440f79"
+		],
+		"folders_order": [],
+		"owner": "0",
+		"favorite": false,
+		"isFavorite": true
+	},
+	"folder": null,
+	"environment": null,
+	"globals": null,
+	"results": [
+		{
+			"name": "http://localhost:9090/Produits",
+			"id": "87091721-c524-45b5-a6b9-938d7160bd93",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"9"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "9",
+			"totalRequestTime": "9",
+			"iterationResults": {}
+		},
+		{
+			"name": "http://localhost:9090/Produits (Produit valide)",
+			"id": "4f93aaaa-9520-40d0-ab6c-92d33771b080",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"id": "3c65864f-848d-4722-b5fe-2aaeaafbb1ed",
+			"url": "http://localhost:9090/TriProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "http://localhost:9090/TriProduits",
+			"id": "4fe456ec-bccd-41b5-bf22-97674643382e",
+			"url": "http://localhost:9090/TriProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "http://localhost:9090/Produits (ProduitGratuitException)",
+			"id": "93cfb574-2619-4c86-8b1a-87c47f440f79",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 32,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "http://localhost:9090/Produits",
+			"id": "87091721-c524-45b5-a6b9-938d7160bd93",
+			"url": "http://localhost:9090/Produits",
+			"time": "2019-07-25T12:52:21.167Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "http://localhost:9090/Produits (Produit valide)",
+			"id": "4f93aaaa-9520-40d0-ab6c-92d33771b080",
+			"url": "http://localhost:9090/Produits",
+			"time": "2019-07-25T12:52:21.167Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"id": "3c65864f-848d-4722-b5fe-2aaeaafbb1ed",
+			"url": "http://localhost:9090/TriProduits",
+			"time": "2019-07-25T12:52:21.167Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "http://localhost:9090/TriProduits",
+			"id": "4fe456ec-bccd-41b5-bf22-97674643382e",
+			"url": "http://localhost:9090/TriProduits",
+			"time": "2019-07-25T12:52:21.167Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "http://localhost:9090/Produits (ProduitGratuitException)",
+			"id": "93cfb574-2619-4c86-8b1a-87c47f440f79",
+			"url": "http://localhost:9090/Produits",
+			"time": "2019-07-25T12:52:21.167Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
