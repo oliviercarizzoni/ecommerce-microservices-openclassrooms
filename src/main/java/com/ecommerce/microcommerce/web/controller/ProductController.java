@@ -117,4 +117,13 @@ public class ProductController {
         return ResponseEntity.ok().body(margeProduits);
     }
 
+    //trier produit par ordre alphabétique
+    @ApiOperation("Récupère la liste des produits triés par ordre alphabétique avec le nom.")
+    @GetMapping("/TriProduits")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+
+        return productDao.findAllByOrderByNomAsc();
+
+    }
+
 }
