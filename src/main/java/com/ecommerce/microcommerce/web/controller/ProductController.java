@@ -17,9 +17,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
+
+import static com.ecommerce.microcommerce.service.ProductService.calculateMargin;
 
 
-@Api( description="API pour es opérations CRUD sur les produits.")
+@Api( description="API pour les opérations CRUD sur les produits.")
 
 @RestController
 public class ProductController {
@@ -29,9 +32,7 @@ public class ProductController {
 
 
     //Récupérer la liste des produits
-
     @RequestMapping(value = "/Produits", method = RequestMethod.GET)
-
     public MappingJacksonValue listeProduits() {
 
         Iterable<Product> produits = productDao.findAll();
@@ -51,7 +52,6 @@ public class ProductController {
     //Récupérer un produit par son Id
     @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")
     @GetMapping(value = "/Produits/{id}")
-
     public Product afficherUnProduit(@PathVariable int id) {
 
         Product produit = productDao.findById(id);
@@ -66,7 +66,6 @@ public class ProductController {
 
     //ajouter un produit
     @PostMapping(value = "/Produits")
-
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
 
         Product productAdded =  productDao.save(product);
@@ -103,6 +102,19 @@ public class ProductController {
         return productDao.chercherUnProduitCher(400);
     }
 
+    //calculer la marge par produit
+    @ApiOperation("Récupère la liste des produits et affiche la marge gagnée par produit.")
+    @GetMapping("/AdminProduits")
+    public ResponseEntity<Map<String, Integer>> calculerMargeProduit() {
 
+        List<Product> produits = productDao.findAll();
+
+        if (produits == null)
+            return ResponseEntity.noContent().build();
+
+        Map<String, Integer> margeProduits = calculateMargin(produits);
+
+        return ResponseEntity.ok().body(margeProduits);
+    }
 
 }
